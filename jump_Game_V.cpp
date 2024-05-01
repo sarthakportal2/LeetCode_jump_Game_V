@@ -1,5 +1,6 @@
 class Solution {
 public:
+//T(C(N))==O(N*log(n)) and S(C(N)=O(N) as it requires non contigous memory allocation in Both iteration  simulatnously 
         int dp[1001];//Dp array's Size declare
         int Game(vector<int>& arr,int d,int i){//Game Funct declare
             if(dp[i]!=-1)return dp[i];//initizlaing Dp array from arr's Left side
@@ -9,7 +10,7 @@ public:
             return dp[i]=out;}//printing Dp's Output
 
         int maxJumps(vector<int>& arr, int d) {//MaxJumps's funct declare
-            memset(dp,-1,sizeof dp);//Memset Protoype Func declare
+            memset(dp,-1,sizeof dp);//Memset Unsigned Character's Coversion Func declare
             int out=1;//Output declare
             for(int i=0;i<arr.size();i++)out=max(out,Game(arr,d,i));//Iterating through Game Array's Max's Size
             return out;}};//Printing Output
